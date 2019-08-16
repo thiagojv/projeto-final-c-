@@ -1,0 +1,523 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8E74E43-46DA-4F8A-84F7-21F8438F5982}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinPFC</RootNamespace>
+    <AssemblyName>WinPFC</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAncestral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestral.Designer.cs">
+      <DependentUpon>FormAncestral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralCadastro.Designer.cs">
+      <DependentUpon>FormAncestralCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralCadastroProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralCadastroProjeto.Designer.cs">
+      <DependentUpon>FormAncestralCadastroProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProcura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProcura.Designer.cs">
+      <DependentUpon>FormAncestralProcura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProcuraNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProcuraNome.Designer.cs">
+      <DependentUpon>FormAncestralProcuraNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProcuraIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProcuraIndice.Designer.cs">
+      <DependentUpon>FormAncestralProcuraIndice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProcuraProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProcuraProjeto.Designer.cs">
+      <DependentUpon>FormAncestralProcuraProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProjeto.Designer.cs">
+      <DependentUpon>FormAncestralProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAncestralProjetoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAncestralProjetoLista.Designer.cs">
+      <DependentUpon>FormAncestralProjetoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroAtributos_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAtributos_PF.Designer.cs">
+      <DependentUpon>FormCadastroAtributos_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroCaracteristicas_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroCaracteristicas_PF.Designer.cs">
+      <DependentUpon>FormCadastroCaracteristicas_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroComplexidades_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroComplexidades_PF.Designer.cs">
+      <DependentUpon>FormCadastroComplexidades_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroEscalasCOCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroEscalasCOCOMO.Designer.cs">
+      <DependentUpon>FormCadastroEscalasCOCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroEsforco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroEsforco.Designer.cs">
+      <DependentUpon>FormCadastroEsforco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroLinguagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroLinguagem.Designer.cs">
+      <DependentUpon>FormCadastroLinguagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroModelo.Designer.cs">
+      <DependentUpon>FormCadastroModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroNivel_Influencia_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroNivel_Influencia_PF.Designer.cs">
+      <DependentUpon>FormCadastroNivel_Influencia_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalculo_COCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalculo_COCOMO.Designer.cs">
+      <DependentUpon>FormCalculo_COCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalculo_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalculo_PF.Designer.cs">
+      <DependentUpon>FormCalculo_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjeto.Designer.cs">
+      <DependentUpon>FormManutencaoProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoAtributos.Designer.cs">
+      <DependentUpon>FormManutencaoProjetoAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoCaracteristicaCOCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoCaracteristicaCOCOMO.Designer.cs">
+      <DependentUpon>FormManutencaoProjetoCaracteristicaCOCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoCaracteristicaPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoCaracteristicaPF.Designer.cs">
+      <DependentUpon>FormManutencaoProjetoCaracteristicaPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoHistorico.Designer.cs">
+      <DependentUpon>FormManutencaoProjetoHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoLinguagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutencaoProjetoLinguagem.Designer.cs">
+      <DependentUpon>FormManutencaoProjetoLinguagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroTamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroTamanho.Designer.cs">
+      <DependentUpon>FormCadastroTamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroTipos_FundamentaisCOCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroTipos_FundamentaisCOCOMO.Designer.cs">
+      <DependentUpon>FormCadastroTipos_FundamentaisCOCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroTipo_Distribuicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroTipo_Distribuicao.Designer.cs">
+      <DependentUpon>FormCadastroTipo_Distribuicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraAtributos_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraAtributos_PF.Designer.cs">
+      <DependentUpon>FormProcuraAtributos_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraCaracteristicas_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraCaracteristicas_PF.Designer.cs">
+      <DependentUpon>FormProcuraCaracteristicas_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraComplexidades_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraComplexidades_PF.Designer.cs">
+      <DependentUpon>FormProcuraComplexidades_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraEscalasCOCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraEscalasCOCOMO.Designer.cs">
+      <DependentUpon>FormProcuraEscalasCOCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraEsforco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraEsforco.Designer.cs">
+      <DependentUpon>FormProcuraEsforco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraLinguagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraLinguagem.Designer.cs">
+      <DependentUpon>FormProcuraLinguagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraModelo.Designer.cs">
+      <DependentUpon>FormProcuraModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraNivel_Influencia_PF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraNivel_Influencia_PF.Designer.cs">
+      <DependentUpon>FormProcuraNivel_Influencia_PF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraProjeto.Designer.cs">
+      <DependentUpon>FormProcuraProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraProjetoAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraProjetoAtributos.Designer.cs">
+      <DependentUpon>FormProcuraProjetoAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraTamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraTamanho.Designer.cs">
+      <DependentUpon>FormProcuraTamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraTipos_FundamentaisCOCOMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraTipos_FundamentaisCOCOMO.Designer.cs">
+      <DependentUpon>FormProcuraTipos_FundamentaisCOCOMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcuraTipo_Distribuicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcuraTipo_Distribuicao.Designer.cs">
+      <DependentUpon>FormProcuraTipo_Distribuicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAncestral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralCadastro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralCadastroProjeto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralCadastroProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProcura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProcura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProcuraNome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProcuraNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProcuraIndice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProcuraIndice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProcuraProjeto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProcuraProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProjeto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAncestralProjetoLista.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAncestralProjetoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAtributos_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroAtributos_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroCaracteristicas_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroCaracteristicas_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroComplexidades_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroComplexidades_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroEscalasCOCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroEscalasCOCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroEsforco.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroEsforco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroLinguagem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroLinguagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroModelo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroNivel_Influencia_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroNivel_Influencia_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalculo_COCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCalculo_COCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalculo_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCalculo_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjeto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjetoAtributos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjetoAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjetoCaracteristicaCOCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjetoCaracteristicaCOCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjetoCaracteristicaPF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjetoCaracteristicaPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjetoHistorico.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjetoHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutencaoProjetoLinguagem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormManutencaoProjetoLinguagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroTamanho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroTipos_FundamentaisCOCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroTipos_FundamentaisCOCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroTipo_Distribuicao.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCadastroTipo_Distribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraAtributos_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraAtributos_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraCaracteristicas_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraCaracteristicas_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraComplexidades_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraComplexidades_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraEscalasCOCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraEscalasCOCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraEsforco.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraEsforco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraLinguagem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraLinguagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraModelo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraNivel_Influencia_PF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraNivel_Influencia_PF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraProjeto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraProjetoAtributos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraProjetoAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraTamanho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraTipos_FundamentaisCOCOMO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraTipos_FundamentaisCOCOMO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcuraTipo_Distribuicao.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProcuraTipo_Distribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modelo\Modelo.csproj">
+      <Project>{0B904741-206A-4494-A74B-613917426ECD}</Project>
+      <Name>Modelo</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Negócio\ClassLib\Negocio.csproj">
+      <Project>{183236CE-9AA3-4928-866E-DD1494BD8DD8}</Project>
+      <Name>Negocio</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inserir.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditInformationHS.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

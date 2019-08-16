@@ -1,0 +1,82 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{183236CE-9AA3-4928-866E-DD1494BD8DD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ancestral.cs" />
+    <Compile Include="Biblioteca.cs" />
+    <Compile Include="Mensagens.cs" />
+    <Compile Include="N_Calculo_COCOMO.cs" />
+    <Compile Include="N_Calculo_PF.cs" />
+    <Compile Include="N_Calculo_Rayleigh.cs" />
+    <Compile Include="N_Caracteristicas_COCOMO.cs" />
+    <Compile Include="N_Projeto_Caracteristicas_COCOMO.cs" />
+    <Compile Include="N_Atributos_PF.cs" />
+    <Compile Include="N_Caracteristicas_PF.cs" />
+    <Compile Include="N_Complexidades_PF.cs" />
+    <Compile Include="N_Escalas_COCOMO.cs" />
+    <Compile Include="N_Esforco.cs" />
+    <Compile Include="N_Linguagem.cs" />
+    <Compile Include="N_Modelo.cs" />
+    <Compile Include="N_Nivel_Influencia_PF.cs" />
+    <Compile Include="N_Projeto.cs" />
+    <Compile Include="N_Projeto_Atributo.cs" />
+    <Compile Include="N_Projeto_Caracteristicas_PF.cs" />
+    <Compile Include="N_Projeto_Historico.cs" />
+    <Compile Include="N_Projeto_Linguagem.cs" />
+    <Compile Include="N_Tamanho.cs" />
+    <Compile Include="N_Tipos_FundamentaisCOCOMO.cs" />
+    <Compile Include="N_Tipo_Distribuicao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modelo\Modelo.csproj">
+      <Project>{0B904741-206A-4494-A74B-613917426ECD}</Project>
+      <Name>Modelo</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Persistência\Persistencia.csproj">
+      <Project>{E4AECA75-DA68-4E53-8E27-FB5F6A27B4F2}</Project>
+      <Name>Persistencia</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
